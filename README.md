@@ -1,7 +1,7 @@
 # Presupuestos España — Web Gamificada de Redistribución de Presupuestos Públicos
 
 ## Overview (Jul 2026)
-MVP built under `/home/carlos/projects/presupuestos/` — Next.js 15 + Tailwind CSS v4 + Recharts. Static export, ready for deploy.
+MVP built under `/home/carlos/projects/presupuestos/` — Next.js 15 + Tailwind CSS v4 + Recharts. Static export, deployed and live on Vercel.
 
 ## Goal
 A web app under `patronaige.com/crítica/` that visualizes Spanish public budgets (PGE + autonomous communities + municipalities) and lets users interactively redistribute spending away from politicians/advisors toward real services (health, education, firefighters, etc.). Gamified with sliders, comparisons, and shareable links.
@@ -27,37 +27,21 @@ A web app under `patronaige.com/crítica/` that visualizes Spanish public budget
 - **Total PGE seed**: 577,100 M€ (real 2024 figure)
 
 ## Build Status
-- `npm run build` ✅ passes — 103 kB static page, 2 pages generated
+- `npm run build` ✅ passes — 103 kB static page, 4 pages generated
+- Deployed to Vercel: ✅ Live at https://presupuestos-three.rose.vercel.app
 - Static export (`output: 'export'`) — no Node.js runtime needed
-- Deployable to any static host (Vercel, Cloudflare Pages, Netlify, GitHub Pages)
 
-## Deploy Options
-
-### Option A — Vercel (recommended)
+## Deploy Command
 ```bash
-vercel login          # one-time browser auth
-vercel --prod         # deploy
-```
-After deploy, set up `patronaige.com/crítica/` as a custom domain or path route.
-
-### Option B — Cloudflare Pages
-```bash
-# Requires CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID
-# Configure in https://dash.cloudflare.com/pages/create
-# Connect GitHub repo: spiritclawd/presupuestos
-# Build command: npm run build
-# Output directory: out
+vercel --prod
 ```
 
-### Option C — GitHub Pages
-```bash
-# Add a gh-pages branch or use GitHub Actions
-```
+## Live URL
+https://presupuestos-three.rose.vercel.app
 
 ## Next Steps (Carlos decides)
-1. Deploy to Vercel / Cloudflare Pages
-2. Set up custom domain (patronaige.com/crítica/)
-3. Expand data pipeline (scrape IGAE + datos.gob.es APIs for fresh data weekly)
-4. Add community/autonomous community picker
-5. Add shareable link generation (encode redistribution as URL params)
-6. Add leaderboard of popular redistributions
+1. Set up custom domain (patronaige.com/crítica/)
+2. Expand data pipeline (scrape IGAE + datos.gob.es APIs for fresh data weekly)
+3. Add community/autonomous community picker
+4. Add shareable link generation (encode redistribution as URL params)
+5. Add leaderboard of popular redistributions
